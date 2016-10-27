@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: password
+  port: 5432
+  database: user_details

@@ -1,0 +1,23 @@
+<%= form_for :user, url: user_edit_path(@user), method: :put do |u| %>
+<p>
+  <%= u.label :FirstName%><br>
+  <%= u.text_field :firstname%>
+  </p>
+
+  <p>
+  <%= u.label :LastName%><br>
+  <%= u.text_field :lastname %>
+  </p>
+  <p>
+   <%= u.label :Email %><br>
+  <%= u.text_field :email %>
+  </p>
+
+  <p>
+   <%= u.label :Password %><br>
+  <%= u.password_field :password %>
+  </p>
+<p>
+  <%= u.submit%>
+  </p>
+<% end %>
