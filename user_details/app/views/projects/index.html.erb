@@ -1,0 +1,19 @@
+<h1>User Details</h1>
+<table border="2px">
+    <tr>
+        <td>Name</td>
+        <td>Duration</td>
+        <td>Teamsize</td>
+         <td>cost</td>
+        <td>Domian</td>
+    </tr><% @projects.each do |u| %><br>
+    <tr>
+        <td><%= u.name %></td>
+        <td><%= u.duration%></td>
+        <td><%= u.teamsize %></td>
+           <td><%= u.cost%></td>
+        <td><%= u.domain %></td>
+    
+    </tr>
+    <% end %>
+</table>

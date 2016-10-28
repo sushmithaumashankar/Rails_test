@@ -15,9 +15,16 @@ get "/users/list" => "users#index", :as => "user_list"
 
 get "/user/:id/edit" => "users#edit", :as => "user_edit"
 
-put "user/:id/edit" => "users#update", :as => "user_update"
+put "/user/:id/edit" => "users#update", :as => "user_update"
 
-delete "user/:id" =>"users#destroy", :as => "user_destroy"
+delete "/user/:id" =>"users#destroy", :as => "user_destroy"
+get "/user/:id" => "users#profile", :as =>"user_profile"
+get "/user/:id" => "users#show", :as =>"user_show"
+get "/project/new" => "projects#new", :as => "project_new"
+post "/project/new" => "projects#create", :as => "project_create"
+
+get "/projects/list" => "projects#index", :as => "project_list"
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 

@@ -6,9 +6,25 @@ class UsersController < ApplicationController
 	def create
 		# binding.pry
 		@user=User.new(user_params)
-		@user.save
-		redirect_to user_list_path
-	end
+		
+   if @user.save
+     redirect_to user_list_path
+   else
+   render 'new'
+   end
+end
+
+ def profile
+   @user=User.find_by_id(params[:id])
+ end
+
+ def project
+ end
+ 
+ def show
+  @user=User.find_by_id(params[:id])
+  redirect_to user_profile_path
+ end
 
 	def index
 		@users=User.all

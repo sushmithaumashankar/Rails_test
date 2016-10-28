@@ -1,0 +1,27 @@
+<%= form_for :project do |u| %>
+<p>
+  <%= u.label :Name%><br>
+  <%= u.text_field :name %>
+  </p>
+
+  <p>
+  <%= u.label :Duration%><br>
+  <%= u.text_field :duration %>
+  </p>
+  <p>
+   <%= u.label :Teamsize %><br>
+  <%= u.text_field :teamsize %>
+  </p>
+
+  <p>
+   <%= u.label :Cost %><br>
+  <%= u.text_field :cost %>
+  </p>
+  <p>
+   <%= u.label :Domain %><br>
+  <%= u.text_field :domain %>
+  </p>
+<p>
+  <%= u.submit%>
+  </p>
+<% end %>

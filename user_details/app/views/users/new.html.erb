@@ -1,4 +1,7 @@
 <%= form_for :user do |u| %>
+<% @user.errors.each do |attr, msg| %>
+<%= "#{attr} #{msg}" if @user.errors[attr].first == msg %> 
+<% end %>
 <p>
   <%= u.label :FirstName%><br>
   <%= u.text_field :firstname %>
